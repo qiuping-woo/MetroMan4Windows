@@ -16,13 +16,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-//“空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409 上有介绍
-
 namespace MetroMan
 {
-    /// <summary>
-    /// 可用于自身或导航至 Frame 内部的空白页。
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         private bool MetroMap = true; //true:Metro false:Map
@@ -51,8 +46,8 @@ namespace MetroMan
         private void btnMetroMap_Click(object sender, RoutedEventArgs e)
         {
             MetroMap = !MetroMap;
-            mapControl.SetValue(Canvas.ZIndexProperty, MetroMap ? 0 : 1);
-            scrollViewer.SetValue(Canvas.ZIndexProperty, MetroMap ? 1 : 0);
+            mapControl.SetValue(Canvas.ZIndexProperty, MetroMap ? 0 : 2);
+            scrollViewer.SetValue(Canvas.ZIndexProperty, MetroMap ? 2 : 0);
         }
 
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -72,7 +67,6 @@ namespace MetroMan
                 int offsetY = (image.PixelHeight - (int)scrollViewer.ViewportHeight) / 2;
                 if (offsetX < 0) offsetX = 0;
                 if (offsetY < 0) offsetY = 0;
-                //Task.Delay(1);
                 scrollViewer.ChangeView(offsetX, offsetY, 1.0f);
             };
             metroControl.Source = image;
@@ -94,6 +88,8 @@ namespace MetroMan
         {
             mapControl.Width = e.NewSize.Width;
             mapControl.Height = e.NewSize.Height;
+            border.Width = e.NewSize.Width;
+            border.Height = e.NewSize.Height;
             scrollViewer.Width = e.NewSize.Width;
             scrollViewer.Height = e.NewSize.Height;
         }

@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MetroMan</RootNamespace>
     <AssemblyName>MetroMan</AssemblyName>
-    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
@@ -101,6 +101,10 @@
     </Content>
     <None Include="MetroMan_StoreKey.pfx" />
     <None Include="project.json" />
+    <PRIResource Include="String\zh-tw\Resources.resw" />
+    <PRIResource Include="String\zh-cn\Resources.resw" />
+    <PRIResource Include="String\ja-jp\Resources.resw" />
+    <PRIResource Include="String\en-us\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -375,6 +379,7 @@
       <Name>MMEngine</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

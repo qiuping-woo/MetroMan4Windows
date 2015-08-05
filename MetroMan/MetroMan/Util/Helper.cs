@@ -18,7 +18,7 @@ namespace MetroMan
                 if (lang.StartsWith("en")) result = Language.English;
                 else if (lang.StartsWith("zh"))
                 {
-                    if (lang.Contains("cn")) result = Language.Simplified;
+                    if (lang.Contains("cn") || lang.Contains("hans")) result = Language.Simplified;
                     else result = Language.Traditional;
                 }
                 else if (lang.StartsWith("ja")) result = Language.Japanese;

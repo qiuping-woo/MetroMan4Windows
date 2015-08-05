@@ -54,7 +54,8 @@
             <SplitView.Content>
                 <Canvas Name="canvasControl" SizeChanged="canvasControl_SizeChanged">
                     <Maps:MapControl Name="mapControl" Canvas.ZIndex="0"/>
-                    <ScrollViewer Name="scrollViewer" Canvas.ZIndex="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" ZoomMode="Enabled">
+                    <Border Name="border" Canvas.ZIndex="1" Background="White"/>
+                    <ScrollViewer Name="scrollViewer" Canvas.ZIndex="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" ZoomMode="Enabled">
                         <Image Name="metroControl" Stretch="None"/>
                     </ScrollViewer>
                 </Canvas>
